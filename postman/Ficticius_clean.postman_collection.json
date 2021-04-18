@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "254f186e-51fa-46a9-a199-acaa20f6e9d9",
+		"name": "Ficticius_clean",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cria Veiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Corolla\",\n    \"marca\": \"Toyota\",\n    \"modelo\": \"XEI\",\n    \"anoDeFabricacao\": 2001,\n    \"consumoMedioCidade\": 9.5,\n    \"consumoMedioRodovias\": 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9098/api/veiculos",
+					"host": [
+						"localhost"
+					],
+					"port": "9098",
+					"path": [
+						"api",
+						"veiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ranking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9098/api/ranking?precoGasolina=4.95&distanciaCidade=100&distanciaRodovias=200",
+					"host": [
+						"localhost"
+					],
+					"port": "9098",
+					"path": [
+						"api",
+						"ranking"
+					],
+					"query": [
+						{
+							"key": "precoGasolina",
+							"value": "4.95"
+						},
+						{
+							"key": "distanciaCidade",
+							"value": "100"
+						},
+						{
+							"key": "distanciaRodovias",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
